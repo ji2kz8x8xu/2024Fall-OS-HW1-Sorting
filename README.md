@@ -101,6 +101,7 @@ Output Time: 2024-11-21 15:30:45.123+08:00
 
 
 <img src="assets/diff_method.png" width="800"/>
+
 ### Figure 1. Execution Time vs Data Size
 
 
@@ -108,6 +109,7 @@ Output Time: 2024-11-21 15:30:45.123+08:00
   
 
 <img src="assets/diff_k.png" width="725"/>
+
 ### Figure 2. Execution Time vs Partition Count (N = 500,000)
 
   For a fixed dataset of 500,000 elements, increasing the number of partitions k for Method 2 significantly reduces execution time up to an optimal point, after which the overhead of merging many small chunks causes slight increases. Method 3 (multiprocessing) exhibits an optimal range around k = 250\~1000, beyond which additional process overhead outweighs parallel gains. Method 4 (multithreading) quickly reaches low execution times when k > 50 and remains stable, as thread overhead and memory contention balance out.
