@@ -99,9 +99,8 @@ Output Time: 2024-11-21 15:30:45.123+08:00
 
 ## Chart Analysis
 
-```markdown
-![Alt text](assets/diff_method.png)
-```
+
+<img src="assets/diff_method.png" width="400"/>
 **Figure 1. Execution Time vs Data Size**
 
 * **English:**
