@@ -67,7 +67,7 @@ Similar to Method 3 but uses threads within a single process. Threads sort parti
 
 ## I/O Format
 
-* **Input files** (placed at test_data/input):
+* **Input files** (placed at test_data file):
 
   * `input_1w`   (10,000 integers)
   * `input_10w`  (100,000 integers)
@@ -89,7 +89,7 @@ Similar to Method 3 but uses threads within a single process. Threads sort parti
 ## Example Session
 
 ```bash
-$ ./sort_hw1
+$ ./main
 Input file name: input_10w
 ********           Sort           ********
 * 1.bubble sort                          *
