@@ -123,7 +123,25 @@ Output Time: 2024-11-21 15:30:45.123+08:00
 ### Figure 1. Execution Time vs Data Size
 
 
-  As the data size increases from 10,000 to 1,000,000 elements, Method 1 (pure Bubble Sort) shows a rapid, non-linear growth in execution time due to its O(n²) complexity. Method 2 (Bubble Merge Sort) improves performance significantly for smaller sizes but still degrades as chunks grow larger. Methods 3 and 4 (multiprocessing and multithreading) maintain much lower execution times across all sizes, with multiprocessing slightly outperforming multithreading at larger scales, likely due to reduced contention in shared memory accesses.
+### Method 1 (Bubble Sort):
+
+The execution time grows non-linearly because the time complexity of Bubble Sort is O(n²). As the data size increases, the execution time increases quadratically.
+
+
+### Method 2 (Bubble Merge Sort):
+
+When the data size is small, execution is significantly faster than Bubble Sort. However, as the data volume increases, the execution time also increases. This method divides the data into segments to reduce the workload per bubble sort, but as the overall data continues to grow, the amount of data each segment handles also increases. Eventually, the execution time still grows gradually.
+
+
+### Method 3 (Bubble Merge Sort with Multiprocessing):
+
+This method offers very stable performance. Even with large data sizes, the execution time remains low because it uses multiprocessing to parallelize the sorting of each segment, thereby reducing the total time.
+
+
+### Method 4 (Bubble Merge Sort with Multithreading):
+
+Compared to Method 3, Method 4 performs similarly on small data. However, as data increases, the execution time becomes slightly higher than Method 3. This might be because multiple threads compete for the same memory address space, causing frequent memory access and resulting in CPU cache and memory bandwidth bottlenecks.
+
   
 
 <img src="assets/diff_k.png" width="725"/>
