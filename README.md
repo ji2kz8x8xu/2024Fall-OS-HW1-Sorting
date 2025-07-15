@@ -100,15 +100,14 @@ Output Time: 2024-11-21 15:30:45.123+08:00
 ## Chart Analysis
 
 
-<img src="assets/diff_method.png" width="400"/>
+<img src="assets/diff_method.png"/>
 **Figure 1. Execution Time vs Data Size**
 
 * **English:**
   As the data size increases from 10,000 to 1,000,000 elements, Method 1 (pure Bubble Sort) shows a rapid, non-linear growth in execution time due to its O(n²) complexity. Method 2 (Bubble Merge Sort) improves performance significantly for smaller sizes but still degrades as chunks grow larger. Methods 3 and 4 (multiprocessing and multithreading) maintain much lower execution times across all sizes, with multiprocessing slightly outperforming multithreading at larger scales, likely due to reduced contention in shared memory accesses.
   
-```markdown
-![Alt text](assets/diff_k.png)
-```
+
+<img src="assets/diff_k.png"/>
 **Figure 2. Execution Time vs Partition Count (N = 500,000)**
 
 * **English:**
