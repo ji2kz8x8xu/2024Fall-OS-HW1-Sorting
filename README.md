@@ -11,6 +11,24 @@ This project implements Assignment 1: performance comparison of four sorting met
 5. Execute the chosen method, measure CPU time, and verify the result.
 6. Write sorted data and performance metrics to `<FileName>_output<MethodNumber>.txt`.
 
+## Sorting Methods
+
+**Method 1: Pure Bubble Sort**
+
+A basic O(n²) algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. It requires no extra memory but is inefficient for large data sets.
+
+**Method 2: Bubble Merge Sort**
+
+First divides the data into K partitions, applies bubble sort on each partition, then merges sorted partitions pairwise until fully sorted. This reduces individual partition size, improving performance over pure bubble sort.
+
+**Method 3: Bubble Merge Sort with Multiprocessing**
+
+Extends Method 2 by using multiple processes: each partition is sorted in a separate process, taking advantage of multiple CPU cores. After local sorts, processes coordinate to merge partitions, reducing wall-clock time.
+
+**Method 4: Bubble Merge Sort with Multithreading**
+
+Similar to Method 3 but uses threads within a single process. Threads sort partitions in parallel and share memory space, which can reduce inter-process communication overhead but may suffer from synchronization costs.
+
 ## Usage
 
 1. **Development Environment**: Windows Subsystem for Linux (WSL2)
