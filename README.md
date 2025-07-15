@@ -140,7 +140,7 @@ Compared to Method 3, Method 4 performs similarly on small data. However, as dat
 
 <img src="assets/diff_k.png" width="725"/>
 
-### Figure 2. Execution Time vs Partition Count (N = 500,000)
+### Figure 2. Execution Time vs Partition Count (N = 1,000,000)
 
 #### Since method 1 cannot adjust the k value, only methods 2, 3, and 4 are discussed.
 **Method 2: Bubble Merge Sort**
