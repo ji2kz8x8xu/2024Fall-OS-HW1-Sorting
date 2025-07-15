@@ -130,7 +130,15 @@ Output Time: 2024-11-21 15:30:45.123+08:00
 
 ### Figure 2. Execution Time vs Partition Count (N = 500,000)
 
-  For a fixed dataset of 500,000 elements, increasing the number of partitions k for Method 2 significantly reduces execution time up to an optimal point, after which the overhead of merging many small chunks causes slight increases. Method 3 (multiprocessing) exhibits an optimal range around k = 250\~1000, beyond which additional process overhead outweighs parallel gains. Method 4 (multithreading) quickly reaches low execution times when k > 50 and remains stable, as thread overhead and memory contention balance out.
+**Method 2: Bubble Merge Sort**
+  When $k$ is small, execution time is high because fewer partitions mean each bubble sort handles a larger data chunk, resulting in longer runs. As $k$ increases, partition sizes shrink and execution time decreases accordingly.
+
+**Method 3: Bubble Merge Sort with Multiprocessing**
+  The fastest execution occurs when $k$ is between 250 and 1000: this balances the overhead of spawning processes against parallel gains. Beyond this range, the cost of managing too many processes outweighs benefits, and execution time grows.
+
+**Method 4: Bubble Merge Sort with Multithreading**
+  Once $k$ exceeds around 50, execution time drops sharply and remains low even as $k$ grows further, with only slight increases due to thread synchronization and memory contention.
+
 
 ## Development Environment
 
